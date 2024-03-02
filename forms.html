@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FORM</title>
+    <link href="images/meteor.png" rel="icon"/>
+</head>
+<body>
+    <!-- 
+        form tag is used to accept data from user. 
+        name = specify the name of form
+        action = specifies server side file to be called. 
+        method = GET/POST (default - GET)
+            GET:
+                produce a long string that appears in server logs in the browser's URL box.
+                restricted to send upto 1024 characters only.
+                can't send binary files (images, videos)
+                Never use GET method if you have password or other sensitive information to be sent to the server.
+            POST:
+                transfers information via HTTP headers.
+                no restriction of data size.
+                used to send ASCII and Binary data like images or PDFs etc.
+
+    -->
+    <form name = "login" method = "post" action = "" target = "" enctype = "" >
+        <label for="use">Username</label>
+        <input type="text" name = "user" id="use" required/><br/>
+        <label>Password</label>
+        <input type = "password" name = "pass" required/><br/>
+        <input type="submit" value = "LOG IN"/>
+    </form>
+    <form name = "register">
+        <h3><font color = "#0000ff">Register Here!</font></h3>
+        <img src="images/basic/light.jpg" width="70px" height="40px"/><br/>
+        <fieldset>
+            <legend>PERSONAL INFO</legend>
+            <input type="text" value="8456" disabled/><br/>
+            <input type="text" value="8456" name="empid" hidden/>
+            <label for="fname">First Name</label>
+            <input type="text" name = "fname" id="fname" placeholder = "CAPITAL LETTER ONLY" size="30" /><br/>
+            <label>contact</label>
+            <input type="number" name="con" tabindex="4"/><br/>
+            <label>Gender</label>
+            <input type ="radio" name="gen" value = "M" tabindex="1" id="ma"/><label for="ma">MALE</label>
+            <input type ="radio" name="gen" value = "F" id="fe"/><label for="fe">FEMALE</label><br/>
+        </fieldset>
+        <fieldset>
+            <legend>CONTACT INFO</legend>
+            <label>EMAIL ID</label>
+            <input type = "email" name = "email" autofocus autocomplete/><br/>
+            <label>EDUCATION</label>
+            <input type="checkbox"  name="edu" checked disabled value= "10"/><label>10th</label>
+            <input type="checkbox"  name="edu" checked hidden value= "10"/>
+            <input type="checkbox"  name="edu" value= "12"/><label>12th</label>
+            <input type="checkbox"  name="edu" value= "UG"/><label>UG</label>
+            <input type="checkbox"  name="edu" value= "PG"/><label>PG</label>
+            <input type="checkbox"  name="edu" value= "diploma"/><label>DIPLOMA</label>
+            <input type="checkbox"  name="edu" value= "certification"/><label>CERTIFICATION</label><br>
+            <label>ADDRESS:</label>
+            <textarea rows = "5" cols="30" name="address"></textarea><br/>
+        </fieldset>
+        <fieldset>
+            <legend>OTHERS</legend>
+            <label>DOB</label>
+            <input type="date" name = "dob"/><br/>
+            <!-- time/month/week-->
+            <label>city</label>
+            <select name = "city">
+                <option disabled selected>Select Your City</option>
+                <optgroup label="GROUP 1">
+                    <option value="bpl">BHOPAL</option>
+                    <option value="DL">DELHI</option>
+                    <option value="KL">KOLKATA</option>
+                </optgroup>
+                <optgroup label="GROUP 2">
+                    <option value="JP">JAIPUR</option>
+                    <option value="NG">NAGPUR</option>
+                    <option value="pn">PUNE</option>
+                    <option value="in">INDORE</option>
+                </optgroup>
+            </select><br/>
+            <label>Choose Your Profile</label>
+            <input type="text" list="profiles" name="profile"/>
+            <datalist id="profiles" >
+                <option value="p1">WEB DEVELOPER</option>
+                <option value="p2">FRONTEND DEVELOPER</option>
+                <option value="p3">DATABASE ENGINEER</option>
+                <option value="p4">BACKEND ENGINEER</option>
+                <option value="p5">UI/UX</option>
+                <option value="p6">IT MANAGER</option>
+                <option value="p7">CLOUD ENGINEER</option>
+                <option value="p8">CYBER EXPERT</option>
+                <option value="p9">PROJECT MANAGER</option>
+            </datalist>
+            <label>UPLOAD YOUR PICTURE</label>
+            <input type="file" name="profile_picture" multiple/><br/>
+
+            <label>Choose Color</label>
+            <input type="color" name="colo"/><br/>
+            <label>SEARCH HERE: </label>
+            <input type="search"/>
+        </fieldset>
+        <!-- fieldset/legend 
+            size/maxlength/minlength/color/file/reset/search/ 
+            required/disabled/hidden/for
+
+            datatlist/option
+
+        -->
+        <br/>
+        <br/>
+        <input type="submit" value="REGISTER">
+        <input type="reset"/>
+        <input type="button" value="NEXT"/>
+        <button>PREV</button>
+    </form>
+
+    <form>
+        <lable>What is Python?</lable>
+        <br/>
+        <input type="radio" name="op1" id="op1"/><label for="op1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, dolor.</label><br/>
+        <input type="radio" name="op1" id="op2"/><label for = "op2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, dolor.</label><br/>
+        <input type="radio" name="op1"/><label>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, dolor.</label><br/>
+        <input type="radio" name="op1"/><label>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, dolor.</label>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+</body>
+</html>
+
+<h1></h1>

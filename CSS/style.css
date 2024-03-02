@@ -1,0 +1,53 @@
+/* 
+    selectors:
+        selector is used to select or point ot a specific element within the page.
+
+        1. universal
+            *
+        2. id
+            #IDNAME
+        3. class
+            .className
+        4. type
+        5. child
+        6. descendent
+        7. grouping
+            h1,h2,h3,p
+        8. Attribute 
+*/
+*{
+    background-color:yellow;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1{
+    color:aqua
+}
+
+.first{
+    text-align: justify;
+    border:2px solid pink;
+    padding:18px;
+}
+
+.second{
+    font-size:10px;
+    margin:10px;
+}
+
+#john{
+    text-decoration:line-through;
+}
+
+div#one p a{
+    text-decoration: none;
+}
+
+input[type = "text"],input[type="email"]{
+    color:red;
+    text-transform:uppercase;
+}
+
+div>p{
+    color:red;
+}
