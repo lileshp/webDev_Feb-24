@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* 
+        transition 
+        transform
+        animation
+        */
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        .main{
+            width:400px;
+            border:2px solid black;
+            margin:auto;
+            text-align:center;
+            position:relative;
+            /* top:50px; */
+            /* left:30px; */
+        }
+        .child{
+            /* display:flex;
+            justify-content:space-around; */
+            width:100px;
+            height:100px;
+            margin:20px;
+        }
+
+        .first{
+            background-color:aquamarine;
+            position:absolute;
+            left:0px;
+        }
+        .second{
+            background-color:lightblue;
+            position:absolute;
+            left:105px;
+        }
+        .third{
+            background-color:bisque;
+            position:absolute;
+            left:210px;
+        }
+
+        /* NAVBAR */
+        nav{
+            background-color:grey;
+            position:sticky;
+            top:0px;
+            z-index:1000;
+            padding:1rem;
+        }
+        nav ul{
+            list-style-type:none;
+            margin:0px;
+            padding:0px;
+            display:flex;
+            justify-content: space-around;
+        }
+        nav li a{
+            text-decoration: none;
+            color:#fff;
+            font-size:1rem;
+            transition:color 0.3s ease;
+            
+        }
+        nav li a:hover{
+            color:aqua;
+        }
+        nav li a:active{
+            color:yellow;
+        }
+        .drop{
+            position:relative;
+            display:inline-block;
+        }
+        .drop-content{
+            display:none;
+            position:absolute;
+            background: grey;
+            min-width:160px;
+            padding:10px 10px 10px 10px;
+        }
+
+        .drop:hover .drop-content{
+            display:block
+        }
+        /* Transform: is used to give transformation into an element */
+        .o{
+            width:100px;
+            height: 100px;
+            background-color:blanchedalmond;
+            color:#fff;
+            font-weight: bold;
+            /* transform:rotate(360deg);  */
+            /* transform:scaleY(1);  */
+            /* transform:skew(50deg); */
+            /* transform:translate(200px,0px); */
+            /* scale(x,y) */
+            /* border-radius:50%; */
+            /* overflow:hidden; */
+            transition:width 2s ease-in, height 2s ease-out,background-color 2s ease-in-out;
+        }
+        .o:hover{
+            width:200px;
+            height:140px;
+            background-color: aqua;
+        }
+        #tr{
+            width:100px;
+            height: 100px;
+            background-color:crimson;
+            color:#fff;
+            font-weight: bold;
+            /* transform:rotate(360deg);  */
+            /* transform:scaleY(1);  */
+            /* transform:skew(50deg); */
+            /* transform:translate(200px,0px); */
+            /* scale(x,y) */
+            border-radius:50%;
+            overflow:hidden;
+        }
+        img{
+            height:100px;
+            width:100px;
+            transition:transform 2s ease-in-out;
+        }
+        img:hover{
+            transform:rotate(360deg);
+        }
+
+        p{
+            column-count:3
+        }
+        i:hover{
+            text-shadow:0px 0px 8px orangered;
+        }
+        /* RESPONSIVE WEB PAGE */
+        @media (min-width:1025px){
+            p{
+                column-count:3;
+            }
+        }
+
+        @media (min-width:768px) and (max-width:1024px){
+            p{
+                column-count:2;
+            }
+        }
+
+        @media (max-width:767px){
+            p{
+                column-count:1
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="main">
+            <div class="child first">FIRST</div>
+            <div class="child second">SECOND</div>
+            <div class="child third">THIRD</div>
+    </div> -->
+    <nav>
+        <ul>
+            <li><a href="#"><i class="fa fa-home"></i> HOME</a></li>
+            <li><a href="#"><i class="fa fa-user"></i> ABOUT US</a></li>
+            <li class="drop">
+                <a href="#"><i class="fa fa-cog"></i> SERVICES</a>
+                <div class="drop-content">
+                    <a href="#">Web Development</a><br/>
+                    <a href="#">Cyber SEcurity</a><br/>
+                    <a href="#">Machine LEarning</a><br/>
+                    <a href="#">Web Deployment</a><br/>
+                </div>                
+            </li>
+            <li><a href="#"><i class="fa fa-envelope"></i> CONTACT</a></li>
+            <li><i class="fa fa-facebook" aria-hidden="true" style="color:blue" id="fi"></i></li>
+        </ul>
+    </nav>
+
+    <div style="position:relative;top: 120px;">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia dignissimos, nemo veritatis, et id ex numquam fugiat, porro voluptatum provident eum consectetur cum laudantium natus sint modi iure dolorem ad ullam. Suscipit, accusamus culpa dignissimos architecto officiis error doloremque quidem voluptatum eos, cumque dolores. Odit accusamus, soluta debitis obcaecati deserunt magnam maxime perspiciatis est quia perferendis ea ipsum, nisi minus libero quos eaque facere consequatur error quae animi doloremque voluptate dolor nemo. Sit nemo velit dolorum quos voluptatem vero alias animi illum, quisquam eveniet aut obcaecati, excepturi, blanditiis eaque quae iure repellat. Aliquam sint enim dolor cum aliquid doloribus consectetur repellendus necessitatibus vel atque modi est quasi beatae perspiciatis accusantium impedit minima deserunt, alias nesciunt rerum ratione provident vero soluta. Non ex facilis odit dolorem, fugit accusamus laboriosam nemo corrupti atque sed at sint obcaecati vel a assumenda rerum molestias maiores commodi quibusdam quasi. Esse earum eaque, architecto tempora exercitationem cum placeat blanditiis aperiam, illum voluptatum corrupti. Reiciendis vel perspiciatis accusantium quam voluptatem voluptatibus, mollitia, aperiam officiis inventore odio quis. Laudantium praesentium beatae qui cupiditate ipsa sint, omnis cumque molestiae reiciendis sit, autem commodi iure voluptate a quam repellat ab non asperiores recusandae? Harum officia quibusdam architecto beatae placeat.</p>
+        <div id="tr"><img src="../images/meteor.png"/></div>
+        <div class="o"></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum id error libero facere a. Tempora natus vero reiciendis assumenda similique, eaque hic sunt quo odio saepe ullam incidunt porro sed cupiditate qui dolor omnis, deserunt aperiam ut nam adipisci eos! Eaque quam necessitatibus cumque asperiores id perferendis voluptatum dolorum iusto incidunt illo laudantium, reiciendis tempore, temporibus, odio nisi. Tempore aliquid quaerat beatae maxime, consequuntur autem porro modi illo animi nesciunt quisquam deserunt, unde ducimus corrupti asperiores ullam repellendus obcaecati voluptas tempora reiciendis veritatis est delectus ipsam nam. Repellat iste dolores dignissimos repudiandae, asperiores eligendi minima sequi perferendis ipsam. Consectetur, eveniet.</p>
+    </div>
+</body>
+</html>
